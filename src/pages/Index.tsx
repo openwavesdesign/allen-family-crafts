@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Sparkles, Heart, Palette, Gift, Star, Truck, MessageCircle, Phone, Mail, Send } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Sparkles, Heart, Palette, Gift, Star, Truck, MessageCircle, Phone, Mail, Send, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
@@ -108,38 +109,50 @@ const Index = () => {
             
             {/* Kids Grid */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
-                <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+              <Link to="/lydia" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
+                <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
                   <span className="text-2xl">🐕</span>
                 </div>
                 <h3 className="font-display font-semibold text-foreground">Lydia</h3>
                 <p className="text-sm text-muted-foreground">Dog toys, dog sticker journals & seasonal garland</p>
-              </div>
+                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
+                  See crafts <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
               
-              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
-                <div className="w-14 h-14 rounded-full bg-lavender/40 flex items-center justify-center mx-auto">
+              <Link to="/evelyn" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
+                <div className="w-14 h-14 rounded-full bg-lavender/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
                   <span className="text-2xl">🐉</span>
                 </div>
                 <h3 className="font-display font-semibold text-foreground">Evelyn</h3>
                 <p className="text-xs text-primary font-medium italic">"Ev the Yarn Dragon"</p>
                 <p className="text-sm text-muted-foreground">Crochet animals, doll clothing & painted journals</p>
-              </div>
+                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
+                  See crafts <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
               
-              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
-                <div className="w-14 h-14 rounded-full bg-accent/40 flex items-center justify-center mx-auto">
+              <Link to="/norah" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
+                <div className="w-14 h-14 rounded-full bg-accent/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
                   <span className="text-2xl">🐍</span>
                 </div>
                 <h3 className="font-display font-semibold text-foreground">Norah</h3>
                 <p className="text-sm text-muted-foreground">Finger crochet snakes</p>
-              </div>
+                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
+                  See crafts <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
               
-              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
-                <div className="w-14 h-14 rounded-full bg-sky/40 flex items-center justify-center mx-auto">
+              <Link to="/hazel" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
+                <div className="w-14 h-14 rounded-full bg-sky/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
                   <span className="text-2xl">🐱</span>
                 </div>
                 <h3 className="font-display font-semibold text-foreground">Hazel</h3>
                 <p className="text-sm text-muted-foreground">Friendship bracelets & cat sticker journals</p>
-              </div>
+                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
+                  See crafts <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
             </div>
 
             <div className="flex flex-wrap justify-center gap-8 pt-4">
