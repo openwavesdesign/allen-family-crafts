@@ -8,28 +8,24 @@ import heroCrafts from "@/assets/hero-crafts.jpg";
 import craftCards from "@/assets/craft-cards.jpg";
 import craftPaintings from "@/assets/craft-paintings.jpg";
 import craftItems from "@/assets/craft-items.jpg";
-
 const Index = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
-    
     setIsSubmitting(true);
     // Simulate submission - replace with actual API call when backend is ready
     setTimeout(() => {
       toast({
         title: "You're on the list! 🎉",
-        description: "We'll let you know about our markets and new creations.",
+        description: "We'll let you know about our markets and new creations."
       });
       setEmail("");
       setIsSubmitting(false);
     }, 500);
   };
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="section-container py-4 flex items-center justify-between">
@@ -77,11 +73,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-accent/30 via-secondary/30 to-lavender/30 rounded-3xl blur-2xl" />
-              <img 
-                src={heroCrafts} 
-                alt="Colorful handmade crafts by the Allen family kids"
-                className="relative rounded-3xl shadow-craft-hover w-full object-cover aspect-[4/3]"
-              />
+              <img src={heroCrafts} alt="Colorful handmade crafts by the Allen family kids" className="relative rounded-3xl shadow-craft-hover w-full object-cover aspect-[4/3]" />
               <div className="absolute -bottom-4 -right-4 bg-accent rounded-2xl p-4 shadow-playful animate-bounce-soft">
                 <Star className="w-8 h-8 text-accent-foreground" />
               </div>
@@ -100,7 +92,7 @@ const Index = () => {
               <span className="text-sm font-medium text-lavender-foreground">About Us</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Meet the Little Creators
+              Meet Our Creators
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Welcome to Allen Family Creations! We're a family-run craft business where the kids are the artists. 
@@ -125,7 +117,7 @@ const Index = () => {
                   <span className="text-2xl">🐉</span>
                 </div>
                 <h3 className="font-display font-semibold text-foreground">Evelyn</h3>
-                <p className="text-xs text-primary font-medium italic">"Ev the Yarn Dragon"</p>
+                
                 <p className="text-sm text-muted-foreground">Crochet animals, doll clothing & painted journals</p>
                 <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
                   See crafts <ArrowRight className="w-3 h-3" />
@@ -199,11 +191,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src={craftCards} 
-                  alt="Handmade greeting cards"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src={craftCards} alt="Handmade greeting cards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-6 space-y-2">
                 <h3 className="font-display text-xl font-semibold text-foreground">Greeting Cards</h3>
@@ -213,11 +201,7 @@ const Index = () => {
             
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src={craftPaintings} 
-                  alt="Kids' paintings and art"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src={craftPaintings} alt="Kids' paintings and art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-6 space-y-2">
                 <h3 className="font-display text-xl font-semibold text-foreground">Paintings & Art</h3>
@@ -227,11 +211,7 @@ const Index = () => {
             
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src={craftItems} 
-                  alt="Handmade bracelets and keychains"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src={craftItems} alt="Handmade bracelets and keychains" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-6 space-y-2">
                 <h3 className="font-display text-xl font-semibold text-foreground">Bracelets & Keychains</h3>
@@ -307,21 +287,8 @@ const Index = () => {
               Be the first to know about our upcoming markets, new craft creations, and family news!
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="flex-1 bg-background border-border rounded-full px-5 h-12"
-              />
-              <Button 
-                type="submit" 
-                variant="hero" 
-                size="lg" 
-                disabled={isSubmitting}
-                className="rounded-full"
-              >
+              <Input type="email" placeholder="Your email address" value={email} onChange={e => setEmail(e.target.value)} required className="flex-1 bg-background border-border rounded-full px-5 h-12" />
+              <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="rounded-full">
                 <Send className="w-4 h-4" />
                 {isSubmitting ? "Joining..." : "Subscribe"}
               </Button>
@@ -386,8 +353,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
