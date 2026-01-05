@@ -8,7 +8,7 @@
   :root {
     /* Warm, playful palette for a kids' craft business */
     --background: 40 33% 97%;
-    --foreground: 25 30% 20%;
+    --foreground: 175 83.8509% 31.5686%;
 
     --card: 40 40% 99%;
     --card-foreground: 25 30% 20%;
@@ -17,12 +17,12 @@
     --popover-foreground: 25 30% 20%;
 
     /* Coral - warm, inviting primary */
-    --primary: 12 76% 61%;
+    --primary: 350 89.1626% 60.1961%;
     --primary-foreground: 0 0% 100%;
 
     /* Mint green - fresh, creative */
     --secondary: 160 40% 85%;
-    --secondary-foreground: 160 30% 25%;
+    --secondary-foreground: 0 73.7089% 41.7647%;
 
     /* Soft muted cream */
     --muted: 40 30% 92%;
@@ -106,6 +106,7 @@
     --sidebar-ring: 12 76% 65%;
     --font-sans: Poppins, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --font-serif: "Crimson Pro", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    --radius: 1rem;
   }
 }
 
