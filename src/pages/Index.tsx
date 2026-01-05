@@ -1,11 +1,32 @@
-import { Sparkles, Heart, Palette, Gift, Star, Truck, MessageCircle, Phone, Mail } from "lucide-react";
+import { useState } from "react";
+import { Sparkles, Heart, Palette, Gift, Star, Truck, MessageCircle, Phone, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 import heroCrafts from "@/assets/hero-crafts.jpg";
 import craftCards from "@/assets/craft-cards.jpg";
 import craftPaintings from "@/assets/craft-paintings.jpg";
 import craftItems from "@/assets/craft-items.jpg";
 
 const Index = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    
+    setIsSubmitting(true);
+    // Simulate submission - replace with actual API call when backend is ready
+    setTimeout(() => {
+      toast({
+        title: "You're on the list! 🎉",
+        description: "We'll let you know about our markets and new creations.",
+      });
+      setEmail("");
+      setIsSubmitting(false);
+    }, 500);
+  };
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -72,7 +93,7 @@ const Index = () => {
       <section id="about" className="bg-secondary/30 relative">
         <div className="absolute inset-0 paper-texture pointer-events-none" />
         <div className="section-container py-16 md:py-24">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 bg-lavender rounded-full px-4 py-2">
               <Sparkles className="w-4 h-4 text-lavender-foreground" />
               <span className="text-sm font-medium text-lavender-foreground">About Us</span>
@@ -80,12 +101,47 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
               Meet the Little Creators
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Welcome to Allen Family Creations! We're a family-run craft business where the kids are the artists. 
-              From colorful greeting cards and paintings to beaded bracelets and handmade decorations, 
-              every creation comes straight from our little ones' imagination. We believe in the magic of 
-              creativity, the joy of making something by hand, and sharing that happiness with you!
+              Each of our four creators brings their own unique talents and imagination to everything they make!
             </p>
+            
+            {/* Kids Grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
+                <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto">
+                  <span className="text-2xl">🐕</span>
+                </div>
+                <h3 className="font-display font-semibold text-foreground">Lydia</h3>
+                <p className="text-sm text-muted-foreground">Dog toys, dog sticker journals & seasonal garland</p>
+              </div>
+              
+              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
+                <div className="w-14 h-14 rounded-full bg-lavender/40 flex items-center justify-center mx-auto">
+                  <span className="text-2xl">🐉</span>
+                </div>
+                <h3 className="font-display font-semibold text-foreground">Evelyn</h3>
+                <p className="text-xs text-primary font-medium italic">"Ev the Yarn Dragon"</p>
+                <p className="text-sm text-muted-foreground">Crochet animals, doll clothing & painted journals</p>
+              </div>
+              
+              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
+                <div className="w-14 h-14 rounded-full bg-accent/40 flex items-center justify-center mx-auto">
+                  <span className="text-2xl">🐍</span>
+                </div>
+                <h3 className="font-display font-semibold text-foreground">Norah</h3>
+                <p className="text-sm text-muted-foreground">Finger crochet snakes</p>
+              </div>
+              
+              <div className="bg-background rounded-2xl p-6 shadow-craft space-y-3">
+                <div className="w-14 h-14 rounded-full bg-sky/40 flex items-center justify-center mx-auto">
+                  <span className="text-2xl">🐱</span>
+                </div>
+                <h3 className="font-display font-semibold text-foreground">Hazel</h3>
+                <p className="text-sm text-muted-foreground">Friendship bracelets & cat sticker journals</p>
+              </div>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-8 pt-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -218,6 +274,48 @@ const Index = () => {
               <h3 className="font-display text-xl font-semibold text-foreground">Receive Your Craft</h3>
               <p className="text-muted-foreground">Pick up locally or we'll arrange delivery. Enjoy your handmade treasure!</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section id="newsletter" className="bg-sky/20 relative">
+        <div className="absolute inset-0 paper-texture pointer-events-none" />
+        <div className="section-container py-16 md:py-20">
+          <div className="max-w-xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-2 bg-sky rounded-full px-4 py-2">
+              <Mail className="w-4 h-4 text-sky-foreground" />
+              <span className="text-sm font-medium text-sky-foreground">Stay Updated</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Join Our Newsletter!
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Be the first to know about our upcoming markets, new craft creations, and family news!
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="flex-1 bg-background border-border rounded-full px-5 h-12"
+              />
+              <Button 
+                type="submit" 
+                variant="hero" 
+                size="lg" 
+                disabled={isSubmitting}
+                className="rounded-full"
+              >
+                <Send className="w-4 h-4" />
+                {isSubmitting ? "Joining..." : "Subscribe"}
+              </Button>
+            </form>
+            <p className="text-sm text-muted-foreground">
+              We promise not to spam you—just crafty goodness! ✨
+            </p>
           </div>
         </div>
       </section>
