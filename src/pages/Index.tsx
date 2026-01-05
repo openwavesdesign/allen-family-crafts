@@ -262,24 +262,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-primary overflow-hidden">
-        <div className="absolute inset-0 paper-texture pointer-events-none opacity-10" />
-        <div className="section-container py-16 md:py-20">
-          <div className="max-w-2xl mx-auto text-center space-y-6">
-            <Heart className="w-12 h-12 text-primary-foreground mx-auto animate-bounce-soft" />
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground">
-              Want to Support Our Little Creators?
-            </h2>
-            <p className="text-primary-foreground/90 text-lg">
-              Every order helps encourage creativity and brings joy to our family. We'd love to make something special for you!
-            </p>
-            <Button variant="accent" size="lg" className="shadow-playful">
-              <MessageCircle className="w-5 h-5" />
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="bg-foreground text-background">
