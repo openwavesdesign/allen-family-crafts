@@ -191,31 +191,31 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img src={craftCards} alt="Handmade greeting cards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img alt="Handmade greeting cards" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="/lovable-uploads/3362d692-f8cf-41e8-9826-71082405f743.jpg" />
               </div>
               <div className="p-6 space-y-2">
-                <h3 className="font-display text-xl font-semibold text-foreground">Greeting Cards</h3>
-                <p className="text-muted-foreground">Colorful, handmade cards for any occasion—birthdays, holidays, or just because!</p>
+                <h3 className="font-display text-xl font-semibold text-foreground">Crochet Animals </h3>
+                <p className="text-muted-foreground">​Adopt a handmade crochet octopus, duck, bee, or emotional support pickle!                 </p>
               </div>
             </div>
             
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img src={craftPaintings} alt="Kids' paintings and art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img alt="Kids' paintings and art" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="/lovable-uploads/72bd42d5-8556-419f-aeff-ab841f151310.jpg" />
               </div>
               <div className="p-6 space-y-2">
-                <h3 className="font-display text-xl font-semibold text-foreground">Paintings & Art</h3>
-                <p className="text-muted-foreground">Unique paintings and artwork full of imagination and color.</p>
+                <h3 className="font-display text-xl font-semibold text-foreground">Clothing and Jewelry </h3>
+                <p className="text-muted-foreground">​Get matching friendship bracelets for you and your dolls or unique clothing items and accessories.                   </p>
               </div>
             </div>
             
             <div className="craft-card group">
               <div className="aspect-square overflow-hidden">
-                <img src={craftItems} alt="Handmade bracelets and keychains" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img alt="Handmade bracelets and keychains" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="/lovable-uploads/dd003485-f951-4e5d-b115-c5be60bfeaa4.jpg" />
               </div>
               <div className="p-6 space-y-2">
-                <h3 className="font-display text-xl font-semibold text-foreground">Bracelets & Keychains</h3>
-                <p className="text-muted-foreground">Beaded bracelets, friendship bracelets, and fun keychains.</p>
+                <h3 className="font-display text-xl font-semibold text-foreground">Pens and Journals    </h3>
+                <p className="text-muted-foreground">Each one is uniquely handmade by one of our kids. </p>
               </div>
             </div>
           </div>
@@ -230,46 +230,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="bg-lavender/20 relative">
-        <div className="absolute inset-0 paper-texture pointer-events-none" />
-        <div className="section-container py-16 md:py-24">
-          <div className="text-center space-y-4 mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2">
-              <Truck className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Simple Process</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              How It Works
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto font-display text-2xl font-bold shadow-craft">
-                1
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground">Browse or Pick</h3>
-              <p className="text-muted-foreground">Check out our featured crafts or tell us what you're looking for!</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center mx-auto font-display text-2xl font-bold shadow-playful">
-                2
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground">Place Your Order</h3>
-              <p className="text-muted-foreground">Send us a message to order or request a custom piece. It's easy!</p>
-            </div>
-            
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center mx-auto font-display text-2xl font-bold shadow-craft">
-                3
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground">Receive Your Craft</h3>
-              <p className="text-muted-foreground">Pick up locally or we'll arrange delivery. Enjoy your handmade treasure!</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Newsletter Section */}
       <section id="newsletter" className="bg-sky/20 relative">
