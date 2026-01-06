@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, Heart, Palette, Gift, Star, Truck, MessageCircle, Phone, Mail, Send, ArrowRight } from "lucide-react";
+import { Sparkles, Heart, Palette, Gift, Star, MessageCircle, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { NavLink } from "@/components/NavLink";
 import heroCrafts from "@/assets/hero-crafts.jpg";
-import craftCards from "@/assets/craft-cards.jpg";
-import craftPaintings from "@/assets/craft-paintings.jpg";
-import craftItems from "@/assets/craft-items.jpg";
 const Index = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,10 +34,10 @@ const Index = () => {
             <span className="font-display text-xl font-semibold text-foreground">Allen Family Creations</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#about" className="font-body text-muted-foreground hover:text-primary transition-colors">About</a>
-            <a href="#crafts" className="font-body text-muted-foreground hover:text-primary transition-colors">Crafts</a>
-            <a href="#how-it-works" className="font-body text-muted-foreground hover:text-primary transition-colors">How It Works</a>
-            <Button variant="default" size="sm">Get in Touch</Button>
+            <NavLink to="/" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Home</NavLink>
+            <NavLink to="/about" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">About</NavLink>
+            <NavLink to="/events" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Events</NavLink>
+            <NavLink to="/contact" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Contact</NavLink>
           </nav>
         </div>
       </header>
@@ -61,14 +59,18 @@ const Index = () => {
                 Fun, colorful, and handmade crafts from the Allen family. Each piece is made with imagination, creativity, and lots of heart!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="lg">
-                  <Palette className="w-5 h-5" />
-                  See Our Creations
-                </Button>
-                <Button variant="outline" size="lg">
-                  <MessageCircle className="w-5 h-5" />
-                  Custom Request
-                </Button>
+                <Link to="/about">
+                  <Button variant="hero" size="lg">
+                    <Palette className="w-5 h-5" />
+                    Meet Our Creators
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button variant="outline" size="lg">
+                    <MessageCircle className="w-5 h-5" />
+                    Custom Request
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -82,7 +84,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Preview Section */}
       <section id="about" className="bg-secondary/30 relative">
         <div className="absolute inset-0 paper-texture pointer-events-none" />
         <div className="section-container py-16 md:py-24">
@@ -95,78 +97,25 @@ const Index = () => {
               Meet Our Creators
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Welcome to Allen Family Creations! We're a family-run craft business where the kids are the artists. 
-              Each of our four creators brings their own unique talents and imagination to everything they make!
+              Allen Family Creations is run by four creative kids: Lydia, Evelyn (aka "Ev the Yarn Dragon"), 
+              Norah, and Hazel. Each one brings their own unique talents—from crochet animals to friendship 
+              bracelets to finger crochet snakes!
             </p>
             
-            {/* Kids Grid */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-              <Link to="/lydia" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
-                <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <span className="text-2xl">🐕</span>
-                </div>
-                <h3 className="font-display font-semibold text-foreground">Lydia</h3>
-                <p className="text-sm text-muted-foreground">Dog toys, dog sticker journals & seasonal garland</p>
-                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
-                  See crafts <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
-              
-              <Link to="/evelyn" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
-                <div className="w-14 h-14 rounded-full bg-lavender/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <span className="text-2xl">🐉</span>
-                </div>
-                <h3 className="font-display font-semibold text-foreground">Evelyn</h3>
-                
-                <p className="text-sm text-muted-foreground">Crochet animals, doll clothing & painted journals</p>
-                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
-                  See crafts <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
-              
-              <Link to="/norah" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
-                <div className="w-14 h-14 rounded-full bg-accent/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <span className="text-2xl">🐍</span>
-                </div>
-                <h3 className="font-display font-semibold text-foreground">Sparrow</h3>
-                <p className="text-sm text-muted-foreground">Finger crochet snakes</p>
-                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
-                  See crafts <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
-              
-              <Link to="/hazel" className="bg-background rounded-2xl p-6 shadow-craft space-y-3 hover:shadow-craft-hover transition-shadow group">
-                <div className="w-14 h-14 rounded-full bg-sky/40 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-                  <span className="text-2xl">🐱</span>
-                </div>
-                <h3 className="font-display font-semibold text-foreground">Hazel</h3>
-                <p className="text-sm text-muted-foreground">Friendship bracelets & cat sticker journals</p>
-                <span className="inline-flex items-center gap-1 text-xs text-primary font-medium">
-                  See crafts <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
+            {/* Kids Preview */}
+            <div className="flex justify-center gap-4 pt-4">
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">🐕</div>
+              <div className="w-16 h-16 rounded-full bg-lavender/40 flex items-center justify-center text-2xl">🐉</div>
+              <div className="w-16 h-16 rounded-full bg-accent/40 flex items-center justify-center text-2xl">🐍</div>
+              <div className="w-16 h-16 rounded-full bg-sky/40 flex items-center justify-center text-2xl">🐱</div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-8 pt-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-primary" />
-                </div>
-                <span className="font-display font-medium text-foreground">Made with Love</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-accent/40 flex items-center justify-center">
-                  <Palette className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <span className="font-display font-medium text-foreground">Kid-Created</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-sky/40 flex items-center justify-center">
-                  <Star className="w-6 h-6 text-sky-foreground" />
-                </div>
-                <span className="font-display font-medium text-foreground">One-of-a-Kind</span>
-              </div>
-            </div>
+            <Link to="/about">
+              <Button variant="hero" size="lg">
+                <Heart className="w-5 h-5" />
+                Meet the Kids
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -278,16 +227,11 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-6 text-background/80">
-              <a href="#" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">Contact Us</span>
-              </a>
-              <a href="#" className="flex items-center gap-2 hover:text-accent transition-colors">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">Call Us</span>
-              </a>
-            </div>
+            <nav className="flex items-center gap-6 text-background/80">
+              <Link to="/about" className="hover:text-accent transition-colors text-sm">About</Link>
+              <Link to="/events" className="hover:text-accent transition-colors text-sm">Events</Link>
+              <Link to="/contact" className="hover:text-accent transition-colors text-sm">Contact</Link>
+            </nav>
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
