@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Heart, Palette, Star } from "lucide-react";
+import { Heart, Palette, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { NavLink } from "@/components/NavLink";
+import Header from "@/components/Header";
 import lydiaImg from "@/assets/lydia-crafts.jpg";
 import evelynImg from "@/assets/evelyn-crafts.jpg";
 import norahImg from "@/assets/norah-crafts.jpg";
@@ -46,23 +46,7 @@ const creators = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="section-container py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl font-semibold text-foreground">Allen Family Creations</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <NavLink to="/" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Home</NavLink>
-            <NavLink to="/about" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">About</NavLink>
-            <NavLink to="/events" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Events</NavLink>
-            <NavLink to="/contact" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Contact</NavLink>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section className="relative bg-lavender/30 overflow-hidden">

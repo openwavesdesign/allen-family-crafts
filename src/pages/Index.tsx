@@ -4,8 +4,9 @@ import { Sparkles, Heart, Palette, Gift, Star, MessageCircle, Mail, Send } from 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-import { NavLink } from "@/components/NavLink";
+import Header from "@/components/Header";
 import heroCrafts from "@/assets/hero-crafts.jpg";
+
 const Index = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,7 +14,6 @@ const Index = () => {
     e.preventDefault();
     if (!email.trim()) return;
     setIsSubmitting(true);
-    // Simulate submission - replace with actual API call when backend is ready
     setTimeout(() => {
       toast({
         title: "You're on the list! 🎉",
@@ -24,23 +24,7 @@ const Index = () => {
     }, 500);
   };
   return <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="section-container py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl font-semibold text-foreground">Allen Family Creations</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <NavLink to="/" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Home</NavLink>
-            <NavLink to="/about" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">About</NavLink>
-            <NavLink to="/events" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Events</NavLink>
-            <NavLink to="/contact" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Contact</NavLink>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
