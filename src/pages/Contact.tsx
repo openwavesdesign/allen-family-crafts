@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, Mail, Send, MessageCircle } from "lucide-react";
+import { Mail, Send, MessageCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
-import { NavLink } from "@/components/NavLink";
+import Header from "@/components/Header";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,6 @@ const Contact = () => {
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
     
     setIsSubmitting(true);
-    // Simulate submission
     setTimeout(() => {
       toast({
         title: "Message Sent! 💌",
@@ -34,23 +33,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="section-container py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl font-semibold text-foreground">Allen Family Creations</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <NavLink to="/" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Home</NavLink>
-            <NavLink to="/about" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">About</NavLink>
-            <NavLink to="/events" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Events</NavLink>
-            <NavLink to="/contact" className="font-body text-muted-foreground hover:text-primary transition-colors" activeClassName="text-primary font-medium">Contact</NavLink>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section className="relative bg-primary/20 overflow-hidden">
