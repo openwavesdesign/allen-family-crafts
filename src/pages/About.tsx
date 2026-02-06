@@ -60,7 +60,7 @@ const About = () => {
             Meet Our Little <span className="text-primary">Creators</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Allen Family Creations is a family-run craft business where the kids are the artists. 
+            Mystical Makers is a family-run craft business where the kids are the artists. 
             Each creator brings their own unique talents and imagination!
           </p>
         </div>
@@ -168,10 +168,10 @@ const About = () => {
         <div className="section-container text-center">
           <Link to="/" className="inline-flex items-center gap-2 hover:text-accent transition-colors">
             <Sparkles className="w-4 h-4" />
-            <span className="font-display">Allen Family Creations</span>
+            <span className="font-display">Mystical Makers</span>
           </Link>
           <p className="text-sm text-background/60 mt-2">
-            Handmade with love by the Allen family
+            Handmade with love by Mystical Makers
           </p>
         </div>
       </footer>

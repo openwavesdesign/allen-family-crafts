@@ -40,7 +40,7 @@ const Index = () => {
                 Creative Crafts Made by Kids, with <span className="text-primary">Love</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-                Fun, colorful, and handmade crafts from the Allen family. Each piece is made with imagination, creativity, and lots of heart!
+                Fun, colorful, and handmade crafts from Mystical Makers. Each piece is made with imagination, creativity, and lots of heart!
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/about">
@@ -81,7 +81,7 @@ const Index = () => {
               Meet Our Creators
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Allen Family Creations is run by four creative kids: Lydia, Evelyn (aka "Ev the Yarn Dragon"), 
+              Mystical Makers is run by four creative kids: Lydia, Evelyn (aka "Ev the Yarn Dragon"), 
               Norah, and Hazel. Each one brings their own unique talents—from crochet animals to friendship 
               bracelets to finger crochet snakes!
             </p>
@@ -206,8 +206,8 @@ const Index = () => {
                 <Sparkles className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-display text-lg font-semibold block">Allen Family Creations</span>
-                <span className="text-sm text-background/70">Handmade with love by the Allen family</span>
+                <span className="font-display text-lg font-semibold block">Mystical Makers</span>
+                <span className="text-sm text-background/70">Handmade with love by Mystical Makers</span>
               </div>
             </div>
             
@@ -220,7 +220,7 @@ const Index = () => {
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
             <p className="text-sm text-background/60">
-              © {new Date().getFullYear()} Allen Family Creations. Made with ❤️ by our family.
+              © {new Date().getFullYear()} Mystical Makers. Made with ❤️ by our family.
             </p>
           </div>
         </div>
