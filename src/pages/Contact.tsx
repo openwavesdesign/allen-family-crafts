@@ -135,10 +135,10 @@ const Contact = () => {
         <div className="section-container text-center">
           <Link to="/" className="inline-flex items-center gap-2 hover:text-accent transition-colors">
             <Sparkles className="w-4 h-4" />
-            <span className="font-display">Mystical Makers</span>
+            <span className="font-display">Allen Family Creations</span>
           </Link>
           <p className="text-sm text-background/60 mt-2">
-            Handmade with love by Mystical Makers
+            Handmade with love by the Allen family
           </p>
         </div>
       </footer>

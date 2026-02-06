@@ -40,7 +40,7 @@ const Index = () => {
                 Creative Crafts Made by Kids, with <span className="text-primary">Love</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-                Fun, colorful, and handmade crafts from Mystical Makers. Each piece is made with imagination, creativity, and lots of heart!
+                Fun, colorful, and handmade crafts from the Allen family. Each piece is made with imagination, creativity, and lots of heart!
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/about">
@@ -68,6 +68,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Preview Section */}
+      <section id="about" className="bg-secondary/30 relative">
+        <div className="absolute inset-0 paper-texture pointer-events-none" />
+        <div className="section-container py-16 md:py-24">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center gap-2 bg-lavender rounded-full px-4 py-2">
+              <Sparkles className="w-4 h-4 text-lavender-foreground" />
+              <span className="text-sm font-medium text-lavender-foreground">About Us</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+              Meet Our Creators
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Allen Family Creations is run by four creative kids: Lydia, Evelyn (aka "Ev the Yarn Dragon"), 
+              Norah, and Hazel. Each one brings their own unique talents—from crochet animals to friendship 
+              bracelets to finger crochet snakes!
+            </p>
+            
+            {/* Kids Preview */}
+            <div className="flex justify-center gap-4 pt-4">
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">🐕</div>
+              <div className="w-16 h-16 rounded-full bg-lavender/40 flex items-center justify-center text-2xl">🐉</div>
+              <div className="w-16 h-16 rounded-full bg-accent/40 flex items-center justify-center text-2xl">🐍</div>
+              <div className="w-16 h-16 rounded-full bg-sky/40 flex items-center justify-center text-2xl">🐱</div>
+            </div>
+
+            <Link to="/about">
+              <Button variant="hero" size="lg">
+                <Heart className="w-5 h-5" />
+                Meet the Kids
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Crafts Section */}
       <section id="crafts" className="relative">
@@ -171,8 +206,8 @@ const Index = () => {
                 <Sparkles className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-display text-lg font-semibold block">Mystical Makers</span>
-                <span className="text-sm text-background/70">Handmade with love by Mystical Makers</span>
+                <span className="font-display text-lg font-semibold block">Allen Family Creations</span>
+                <span className="text-sm text-background/70">Handmade with love by the Allen family</span>
               </div>
             </div>
             
@@ -185,7 +220,7 @@ const Index = () => {
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center">
             <p className="text-sm text-background/60">
-              © {new Date().getFullYear()} Mystical Makers. Made with ❤️ by our family.
+              © {new Date().getFullYear()} Allen Family Creations. Made with ❤️ by our family.
             </p>
           </div>
         </div>
