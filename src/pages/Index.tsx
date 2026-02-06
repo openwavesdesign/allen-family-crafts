@@ -68,41 +68,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <section id="about" className="bg-secondary/30 relative">
-        <div className="absolute inset-0 paper-texture pointer-events-none" />
-        <div className="section-container py-16 md:py-24">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 bg-lavender rounded-full px-4 py-2">
-              <Sparkles className="w-4 h-4 text-lavender-foreground" />
-              <span className="text-sm font-medium text-lavender-foreground">About Us</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              Meet Our Creators
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Mystical Makers is run by four creative kids: Lydia, Evelyn (aka "Ev the Yarn Dragon"), 
-              Norah, and Hazel. Each one brings their own unique talents—from crochet animals to friendship 
-              bracelets to finger crochet snakes!
-            </p>
-            
-            {/* Kids Preview */}
-            <div className="flex justify-center gap-4 pt-4">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">🐕</div>
-              <div className="w-16 h-16 rounded-full bg-lavender/40 flex items-center justify-center text-2xl">🐉</div>
-              <div className="w-16 h-16 rounded-full bg-accent/40 flex items-center justify-center text-2xl">🐍</div>
-              <div className="w-16 h-16 rounded-full bg-sky/40 flex items-center justify-center text-2xl">🐱</div>
-            </div>
-
-            <Link to="/about">
-              <Button variant="hero" size="lg">
-                <Heart className="w-5 h-5" />
-                Meet the Kids
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Crafts Section */}
       <section id="crafts" className="relative">
